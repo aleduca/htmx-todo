@@ -5,7 +5,7 @@
     <h1 class="text-2xl font-bold mb-4">📋 Lista de Tarefas</h1>
     <x-add_task />
 
-    <x-tasks_list />
+    <x-tasks />
 </div>
 
 
