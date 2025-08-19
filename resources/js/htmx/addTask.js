@@ -1,5 +1,18 @@
 function afterAddTask(form, element, event){
   form.reset();
+  const xhr = event.detail.xhr;
+
+  if(xhr.status === 200){
+    const liElements = document.querySelectorAll(`${element} li`);
+    const none_task = document.querySelector(`${element} #none-task`);
+
+    if(liElements.length === 2){
+      none_task?.remove();
+    }
+
+    document.querySelector('#error_add_task').innerHTML = '';
+  }
+
 }
 
 function errorAddTask(event){

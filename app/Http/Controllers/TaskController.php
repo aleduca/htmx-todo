@@ -33,6 +33,12 @@ class TaskController extends Controller
     $validated = request()->validate([
       'title' => 'required|min:3'
     ]);
+
+    $task = Task::create([
+      'title' => $validated['title']
+    ]);
+
+    return view('partials._single_task', compact('task'));
   }
 
   /**

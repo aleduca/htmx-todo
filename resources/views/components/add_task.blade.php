@@ -3,7 +3,7 @@
   class="flex gap-2 mb-4"
   hx-post="{{ route('task.store') }}"
   hx-target="#tasks-list"
-  hx-swap="afterBegin"
+  hx-swap="afterbegin"
   hx-headers='{"X-CSRF-TOKEN":"{{ csrf_token() }}", "Accept":"application/json"}'
   hx-on::after-request="document.htmxActions.afterAddTask(this,'#tasks-list',event)"
   hx-on::response-error="document.htmxActions.errorAddTask(event)"
@@ -19,6 +19,6 @@
       type="submit"
       class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded cursor-pointer"
   >
-    Adicionar
+    <x-button-loading text="Adicionar" />
   </button>
 </form>
