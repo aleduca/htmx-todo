@@ -1,4 +1,4 @@
-<ul>
+<ul class="space-y-2" id="tasks-list">
   @forelse ($tasks as $task)
     <li class="p-2 bg-gray-50 rounded-lg flex justify-between items-center hover:bg-gray-100 transition">
       <div>

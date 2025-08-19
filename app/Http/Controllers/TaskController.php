@@ -30,7 +30,9 @@ class TaskController extends Controller
    */
   public function store(Request $request)
   {
-    //
+    $validated = request()->validate([
+      'title' => 'required|min:3'
+    ]);
   }
 
   /**

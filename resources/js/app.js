@@ -1,2 +1,2 @@
 import './bootstrap';
-import 'htmx.org';
+import 'htmx.org'
