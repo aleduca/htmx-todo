@@ -10,7 +10,8 @@
 
 @push('js')
 @vite([
-  'resources/js/htmx/addTask.js'
+  'resources/js/htmx/addTask.js',
+  'resources/js/htmx/deleteTask.js'
 ])
 @endpush
 
