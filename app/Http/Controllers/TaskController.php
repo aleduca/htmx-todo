@@ -25,6 +25,11 @@ class TaskController extends Controller
     //
   }
 
+  public function cancel(Task $task)
+  {
+    return view('partials._single_task', compact('task'));
+  }
+
   /**
    * Store a newly created resource in storage.
    */
@@ -52,9 +57,9 @@ class TaskController extends Controller
   /**
    * Show the form for editing the specified resource.
    */
-  public function edit(string $id)
+  public function edit(Task $task)
   {
-    //
+    return view('partials._form_edit_task', compact('task'));
   }
 
   /**

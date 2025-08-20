@@ -3,7 +3,10 @@
     {{ $task->title }}
   </div>
   <div>
-    <button class="bg-green-500 text-white px-3 py-1 rounded-lg hover:bg-green-600 transition cursor-pointer">📝</button>
+    <button
+    hx-get="{{ route('task.edit', $task) }}"
+    hx-target="#task-{{ $task->id }}"
+    class="bg-green-500 text-white px-3 py-1 rounded-lg hover:bg-green-600 transition cursor-pointer">📝</button>
     <button
     hx-delete="{{ route('task.delete',$task) }}"
     hx-swap="none"
