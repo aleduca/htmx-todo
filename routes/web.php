@@ -9,4 +9,5 @@ Route::get('/task/edit/{task}', [TaskController::class, 'edit'])->name('task.edi
 Route::get('/task/cancel/{task}', [TaskController::class, 'cancel'])->name('task.cancel');
 Route::post('/task', [TaskController::class, 'store'])->name('task.store');
 Route::put('/task/{task}', [TaskController::class, 'update'])->name('task.update');
+Route::put('/task/done/{task}', [TaskController::class, 'done'])->name('task.done');
 Route::delete('/task/{task}', [TaskController::class, 'destroy'])->name('task.delete');

@@ -30,6 +30,14 @@ class TaskController extends Controller
     return view('partials._single_task', compact('task'));
   }
 
+  public function done(Task $task)
+  {
+    $task->done = request()->has('done');
+    $task->save();
+
+    return view('partials._single_task', compact('task'));
+  }
+
   /**
    * Store a newly created resource in storage.
    */

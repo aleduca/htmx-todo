@@ -1,5 +1,14 @@
 <li class="p-2 bg-gray-50 rounded-lg flex justify-between items-center hover:bg-gray-100 transition" id="task-{{ $task->id }}">
-  <div>
+  <div class="flex items-center {{ $task->done ? 'line-through' : '' }}">
+    <input
+      hx-put="{{ route('task.done', $task) }}"
+      name="done"
+      hx-target="#task-{{ $task->id }}"
+      hx-swap="outerHTML"
+      hx-headers='{"X-CSRF-TOKEN":"{{ csrf_token() }}"}'
+      type="checkbox"
+      class="w-4 h-4 mr-2" {{ $task->done ? 'checked' : '' }}
+    >
     {{ $task->title }}
   </div>
   <div>
