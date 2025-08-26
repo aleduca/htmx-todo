@@ -11,6 +11,7 @@
     >
     {{ $task->title }}
   </div>
+  @if(!$task->done)
   <div>
     <button
     hx-get="{{ route('task.edit', $task) }}"
@@ -26,4 +27,5 @@
     class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 transition cursor-pointer"
     >🗑</button>
   </div>
+  @endif
 </li>
