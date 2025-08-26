@@ -81,7 +81,7 @@ class TaskController extends Controller
    */
   public function destroy(Task $task)
   {
-    // $task->delete();
+    $task->delete();
 
     return response()->noContent();
   }
