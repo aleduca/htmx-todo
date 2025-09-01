@@ -1,6 +1,6 @@
 <div class="w-full text-red-600 italic text-xs" id="error_add_task"></div>
  <form
-  class="flex gap-2 mb-4"
+  class="flex gap-2 mb-4 count"
   hx-post="{{ route('task.store') }}"
   hx-target="#tasks-list"
   hx-swap="afterbegin"

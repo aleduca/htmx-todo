@@ -48,7 +48,7 @@ class TaskController extends Controller
     ]);
 
     $task = Task::create([
-      'title' => $validated['titl']
+      'title' => $validated['title']
     ]);
 
     return view('partials._single_task', compact('task'));
